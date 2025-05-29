@@ -4,24 +4,32 @@ import data from '../../data'
 
 const Quiz = () => {
     const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
-    const [selectedAnswer, setSelectedAnswer] = useState(null);
     const [score, setScore] = useState(0)
+    const [selectedAnswerId, setSelectedAnswerId] = useState(null); // временный выбор
+    const [confirmedAnswer, setConfirmedAnswer] = useState(null);
 
-    function handleAnswerClick(answers) {
-        setSelectedAnswer(answers)
-        answers.isCorrect ? setScore(score + 1) : score
+    function handleAnswerClick(answersIndex) {
+        setSelectedAnswerId(answersIndex)
     }
 
     function handleNextQuestion() {
-        setSelectedAnswer(null)
+        setSelectedAnswerId(null)
         setCurrentQuestionIndex(currentQuestionIndex + 1)
-    } 
+        setConfirmedAnswer(null)
+    }
+
+    function checkQuestion(answer) {
+        setConfirmedAnswer(answer)
+        if (answer.isCorrect) {
+        setScore(score + 1);
+    }
+    }
 
     if (currentQuestionIndex >= data.length) {
         return (
             <div className="container">
                 <h2>Вы завершили тест ваш результат: {score}</h2>
-                <button className="next-button" onClick={() => setCurrentQuestionIndex(0)}>Попробовать снова</button>
+                <button className="next-button again" onClick={() => setCurrentQuestionIndex(0)}>Попробовать снова</button>
             </div>
         )
     }
@@ -43,19 +51,23 @@ const Quiz = () => {
                     {currentQuestion.answers.map((answers, answersIndex) => (
                         <li
                             key={answersIndex}
-                            onClick={() => !selectedAnswer && handleAnswerClick(answers)}
+                            onClick={() => handleAnswerClick(answersIndex)}
                             className={`
-                                ${selectedAnswer ? 'disabled' : ''}
-                                ${selectedAnswer && answers.isCorrect ? 'correct' : ''}
-                                ${selectedAnswer === answers && !answers.isCorrect ? 'incorrect' : ''}
-                                `}
+        ${selectedAnswerId === answersIndex ? 'selected' : ''}
+        ${confirmedAnswer ? 'disabled' : ''}
+        ${confirmedAnswer && answers.isCorrect ? 'correct' : ''}
+        ${confirmedAnswer && selectedAnswerId === answersIndex && !answers.isCorrect ? 'incorrect' : ''}
+    `}
                         >
                             {answers.text}
                         </li>
                     ))}
                 </ul>
             </div>
-            <button className="next-button" onClick={handleNextQuestion}>{currentQuestionIndex === data.length - 1 ? 'Завершить тест' : 'Следующий вопрос'}</button>
+            <div className="btn">
+                <button className={`confirm-button ${!selectedAnswerId ? 'disabled' : ''}`} onClick={() => checkQuestion(currentQuestion.answers[selectedAnswerId])}>Выбрать ответ</button>
+                <button className="next-button" onClick={handleNextQuestion}>{currentQuestionIndex === data.length - 1 ? 'Завершить тест' : 'Следующий вопрос'}</button>
+            </div>
         </div>
     )
 }
