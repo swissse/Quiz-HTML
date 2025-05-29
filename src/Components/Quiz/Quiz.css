@@ -1,0 +1,151 @@
+/* .h {
+    margin-bottom: 20px;
+}
+
+.disabled {
+    opacity: 0.7;
+    pointer-events: none;
+}
+
+.correct {
+    background-color: #d4edda;
+    color: #155724;
+    border-left: 4px solid #28a745;
+}
+
+.incorrect {
+    background-color: #f8d7da;
+    color: #721c24;
+    border-left: 4px solid #dc3545;
+}
+
+.next-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.next-button:hover {
+    background-color: #0069d9;
+}
+
+.progress {
+    margin: 10px 0;
+    font-weight: bold;
+}
+
+.container {
+    width: 100vh;
+    height: 100vh;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+li {
+    list-style: none;
+    font-size: 16px;
+    cursor: pointer;
+    padding: 10px;
+    margin: 5px 0;
+    transition: all 0.3s;
+} */
+
+
+/* Quiz.css */
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+.progress {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 345px;
+    margin: 20px 0;
+    font-size: 1.1em;
+}
+
+.h {
+    margin-bottom: 30px;
+    color: #2c3e50;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    width: 100%;
+    max-width: 600px;
+}
+
+li {
+    background-color: #f8f9fa;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: left;
+    border: 1px solid #dee2e6;
+}
+
+li:hover {
+    background-color: #e9ecef;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.disabled {
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+.correct {
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+    color: #155724;
+}
+
+.incorrect {
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+    color: #721c24;
+}
+
+.next-button {
+    margin-top: 30px;
+    padding: 12px 30px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.next-button:hover {
+    background-color: #2980b9;
+}
+
+/* Для завершающего экрана */
+.container h2 {
+    margin-bottom: 30px;
+    font-size: 2em;
+    color: #2c3e50;
+}
