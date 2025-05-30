@@ -42,6 +42,8 @@ h1 {
     text-align: center;
 }
 
+.no-underline { text-Decoration: none; }
+
 /* Список ответов */
 ul {
     width: 100%;

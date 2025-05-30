@@ -91,4 +91,97 @@ const data = [
     }
 ]
 
+export const dataReact = [
+    {
+        "question": "Что возвращает метод render() в React-компоненте?",
+        "answers": [
+            { "text": "Исходный HTML-код", "isCorrect": false },
+            { "text": "JSX-разметку", "isCorrect": true },
+            { "text": "Объект виртуального DOM", "isCorrect": false },
+            { "text": "Строку с HTML", "isCorrect": false }
+        ]
+    },
+    {
+        "question": "Какой хук используется для управления состоянием в функциональных компонентах?",
+        "answers": [
+            { "text": "useEffect", "isCorrect": false },
+            { "text": "useContext", "isCorrect": false },
+            { "text": "useState", "isCorrect": true },
+            { "text": "useReducer", "isCorrect": false }
+        ]
+    },
+    {
+        "question": "Для чего используется ключ (key) при рендеринге списков?",
+        "answers": [
+            { "text": "Для стилизации элементов списка", "isCorrect": false },
+            { "text": "Как уникальный идентификатор для виртуального DOM", "isCorrect": true },
+            { "text": "Для доступа к элементу через ref", "isCorrect": false },
+            { "text": "Это обязательный атрибут HTML", "isCorrect": false }
+        ]
+    },
+    {
+        "question": "Что делает метод componentDidMount()?",
+        "answers": [
+            { "text": "Вызывается перед удалением компонента", "isCorrect": false },
+            { "text": "Вызывается после первого рендера компонента", "isCorrect": true },
+            { "text": "Используется для обновления пропсов", "isCorrect": false },
+            { "text": "Обрабатывает ошибки рендеринга", "isCorrect": false }
+        ]
+    },
+    {
+        "question": "Как передать данные от родительского компонента к дочернему?",
+        "answers": [
+            { "text": "Через props", "isCorrect": true },
+            { "text": "Через state", "isCorrect": false },
+            { "text": "Через ref", "isCorrect": false },
+            { "text": "Через методы жизненного цикла", "isCorrect": false }
+        ]
+    },
+    {
+        "question": "Что такое React Context?",
+        "answers": [
+            { "text": "Способ стилизации компонентов", "isCorrect": false },
+            { "text": "Механизм передачи данных через дерево компонентов без использования props", "isCorrect": true },
+            { "text": "Инструмент для работы с формами", "isCorrect": false },
+            { "text": "Тип глобального хранилища состояний", "isCorrect": false }
+        ]
+    },
+    {
+        "question": "Как предотвратить стандартное поведение формы при сабмите?",
+        "answers": [
+            { "text": "event.stopPropagation()", "isCorrect": false },
+            { "text": "event.preventDefault()", "isCorrect": true },
+            { "text": "return false", "isCorrect": false },
+            { "text": "event.blockDefault()", "isCorrect": false }
+        ]
+    },
+    {
+        "question": "Что такое управляемый (controlled) компонент формы?",
+        "answers": [
+            { "text": "Компонент с собственным состоянием", "isCorrect": false },
+            { "text": "Компонент, управляемый через Redux", "isCorrect": false },
+            { "text": "Элемент формы, значение которого контролируется React", "isCorrect": true },
+            { "text": "Компонент с валидацией", "isCorrect": false }
+        ]
+    },
+    {
+        "question": "Какой метод используется для оптимизации перерисовки классовых компонентов?",
+        "answers": [
+            { "text": "React.memo()", "isCorrect": false },
+            { "text": "useMemo()", "isCorrect": false },
+            { "text": "Наследование от PureComponent", "isCorrect": true },
+            { "text": "shouldComponentUpdate()", "isCorrect": false }
+        ]
+    },
+    {
+        "question": "Как вызвать метод дочернего компонента из родительского?",
+        "answers": [
+            { "text": "Через глобальную переменную", "isCorrect": false },
+            { "text": "Через props-колбэк", "isCorrect": true },
+            { "text": "Через прямой вызов this.child.method()", "isCorrect": false },
+            { "text": "Через React.forwardRef", "isCorrect": false }
+        ]
+    }
+]
+
 export default data

@@ -1,9 +1,9 @@
-import React, { useState } from 'react'
-import './Quiz.css'
-import data from '../../data'
+import { useState } from 'react'
+import '../Quiz/Quiz.css'
+import {dataReact} from '../../data.js'
 import { Link } from 'react-router-dom';
 
-const Quiz = () => {
+const QuizReact = () => {
     const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
     const [score, setScore] = useState(0)
     const [selectedAnswerId, setSelectedAnswerId] = useState(null); // временный выбор
@@ -26,7 +26,7 @@ const Quiz = () => {
     }
     }
 
-    if (currentQuestionIndex >= data.length) {
+    if (currentQuestionIndex >= dataReact.length) {
         return (
             <div className="container">
                 <h2>Вы завершили тест ваш результат: {score}</h2>
@@ -35,14 +35,14 @@ const Quiz = () => {
         )
     }
 
-    const currentQuestion = data[currentQuestionIndex]
+    const currentQuestion = dataReact[currentQuestionIndex]
 
     return (
         <div className='container'>
             <Link className='no-underline' to={'/'}><h1>Quiz</h1></Link>
 
             <div className="progress">
-                <p>Вопрос {currentQuestionIndex + 1} из {data.length}</p>
+                <p>Вопрос {currentQuestionIndex + 1} из {dataReact.length}</p>
                 <p>Oчки: {score}</p>
             </div>
 
@@ -67,10 +67,10 @@ const Quiz = () => {
             </div>
             <div className="btn">
                 <button className={`confirm-button ${!selectedAnswerId ? 'disabled' : ''}`} onClick={() => checkQuestion(currentQuestion.answers[selectedAnswerId])}>Выбрать ответ</button>
-                <button className="next-button" onClick={handleNextQuestion}>{currentQuestionIndex === data.length - 1 ? 'Завершить тест' : 'Следующий вопрос'}</button>
+                <button className="next-button" onClick={handleNextQuestion}>{currentQuestionIndex === dataReact.length - 1 ? 'Завершить тест' : 'Следующий вопрос'}</button>
             </div>
         </div>
     )
 }
 
-export default Quiz
+export default QuizReact
