@@ -1,13 +1,26 @@
-# React + Vite
+# 🎮 QuizByte - Мультиплеерная Викторина
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+[![Live Demo](https://img.shields.io/badge/demo-live-green?style=for-the-badge)](https://quiz-byte-ashy.vercel.app/)
+![React](https://img.shields.io/badge/react-18.2.0-blue?style=for-the-badge)
+![Socket.io](https://img.shields.io/badge/socket.io-4.7.2-yellow?style=for-the-badge)
 
-Currently, two official plugins are available:
+Интерактивная платформа для проведения викторин с поддержкой мультиплеера в реальном времени. Играйте с друзьями на разных устройствах!
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ✨ Особенности
 
-## Expanding the ESLint configuration
+- **Режимы игры**:
+  - 🔥 Hot Seat (на одном устройстве)
+  - 🌐 Online Multiplayer (через интернет)
+- **Синхронизация**:
+  - ⏱️ Общий таймер ответов
+  - 📊 Лидерборд в реальном времени
+- **Кастомизация**:
+  - 🎨 Анимированный градиентный фон
+  - 🔊 Звуковые эффекты
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
-# Quiz-HTML
+## 🚀 Быстрый старт
+
+1. **Клонируйте репозиторий**:
+   ```bash
+   git clone https://github.com/yourusername/quizbyte.git
+   cd quizbyte
